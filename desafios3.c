@@ -14,5 +14,7 @@ int main() {
 
     int resposta = varX * varY;
     printf("o resultado da multiplicacao entre %d e %d: %d", varX, varY, resposta);
+
+    return 0;
 }
 
