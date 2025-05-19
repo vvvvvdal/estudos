@@ -39,7 +39,7 @@ int main() {
     int b;
     int c;
     int fatorial = 1;
-    printf("digite seu numero escolhido para calcular fatoral\n");
+    printf("digite seu numero escolhido para calcular fatorial\n");
     scanf("%d", &b);
     printf("seu numero escolhido foi %d\n\n", b);
     for(c = 1 ; c <= b ; c++) {
