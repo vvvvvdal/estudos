@@ -1,5 +1,21 @@
 #include <stdio.h>
 
+// Escreva uma função potencia() que receba dois inteiros, c e d, calcule a potência c^d, ou seja, c elevado a d e imprima o resultado.
+    void potencia(int c, int d) {
+        int pot = 1;
+
+        printf("digite o c: ");
+        scanf("%d", &c);
+
+        printf("\ndigite o d: ");
+        scanf("%d", &d);
+
+        for(int j = 0; j < d; j++) {
+            pot *= c;
+        }
+        printf("\n%d elevado a %d = %d", c, d, pot);
+    }
+
 int main() {
 
 // Escreva um programa que peça para o usuário digitar duas variáveis inteiras (x e y) e
@@ -17,11 +33,6 @@ int main() {
 
 
 
-
-
-
-
-
 // Escreva um programa que peça um inteiro ao usuário, e com esse inteiro, ele imprima, linha-a-linha, a tabuada daquele número até o 10.
 // Por exemplo, se ele escolher o número 2, o programa imprimirá: 2x1=2, 2x2=4, 2x3=6, ..., 2x10=20.
     int a;
@@ -34,6 +45,7 @@ int main() {
     printf("%d * %d = %d\n", a, i, resultado);
     }
 
+    
 
 // Faça uma calculadora do fatorial de um número
     int b;
@@ -60,6 +72,12 @@ int main() {
     for(i = 0; i < 5; i++) {
         printf("no lugar %d tem a nota %d\n",i , notas[i]);
     }
+    printf("\n");
 
+
+    
+// Escreva uma função potencia() que receba dois inteiros, c e d, calcule a potência c^d, ou seja, c elevado a d e imprima o resultado.
+    potencia(0, 0);
+    
     return 0;
 }
