@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 // Escreva uma função potencia() que receba dois inteiros, c e d, calcule a potência c^d, ou seja, c elevado a d e imprima o resultado.
     void potencia(int c, int d) {
@@ -15,6 +16,19 @@
         }
         printf("\n%d elevado a %d = %d", c, d, pot);
     }
+
+
+
+// Escreva uma função soma(int numeros[10]) que receba um array de inteiros e imprime a soma de todos os elementos dentro desse array.
+    void soma(int numeros[10]) {
+        int resultado = 0;
+
+        for(int m = 0; m < 10; m++) {
+            resultado += numeros[m];
+        }
+        printf("\nresultado da soma: %d", resultado);
+    }
+
 
 int main() {
 
@@ -45,7 +59,7 @@ int main() {
     printf("%d * %d = %d\n", a, i, resultado);
     }
 
-    
+
 
 // Faça uma calculadora do fatorial de um número
     int b;
@@ -71,13 +85,21 @@ int main() {
 
     for(i = 0; i < 5; i++) {
         printf("no lugar %d tem a nota %d\n",i , notas[i]);
+
     }
     printf("\n");
 
 
     
+
 // Escreva uma função potencia() que receba dois inteiros, c e d, calcule a potência c^d, ou seja, c elevado a d e imprima o resultado.
     potencia(0, 0);
-    
-    return 0;
+
+
+
+// Escreva uma função soma(int numeros[10]) que receba um array de inteiros e imprime a soma de todos os elementos dentro desse array.
+    int numerosDaSoma[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    soma(numerosDaSoma);
+
+return 0;
 }
