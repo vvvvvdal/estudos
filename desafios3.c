@@ -30,6 +30,13 @@
     }
 
 
+
+// Escreva uma função somma que recebe um ponteiro de inteiro num e mais dois inteiros m e m. A função deve calcular a soma de m+n em num.
+void somma(int* num2, int* m2, int* n2) {
+    (*num2) = (*m2) + (*n2);
+}
+
+
 int main() {
 
 // Escreva um programa que peça para o usuário digitar duas variáveis inteiras (x e y) e
@@ -55,8 +62,8 @@ int main() {
     scanf("%d", &a);
     printf("seu numero escolhido foi %d\n\n", a);
     for(i = 1 ; i <= 20 ; i++) {
-    int resultado = a * i;
-    printf("%d * %d = %d\n", a, i, resultado);
+        int resultado = a * i;
+        printf("%d * %d = %d\n", a, i, resultado);
     }
 
 
@@ -100,6 +107,23 @@ int main() {
 // Escreva uma função soma(int numeros[10]) que receba um array de inteiros e imprime a soma de todos os elementos dentro desse array.
     int numerosDaSoma[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     soma(numerosDaSoma);
+
+
+
+// Escreva uma função somma que recebe um ponteiro de inteiro num e mais dois inteiros m e n. A função deve calcular a soma de m+n em num.
+    int m;
+    int n;
+
+    printf("digite o m: ");
+    scanf("%d", &m );
+
+    printf("\ndigite o n: ");
+    scanf("%d", &n);
+
+    int num = m + n;
+    
+    somma(&num, &m, &n);
+    printf("%d + %d = %d", m, n, num);
 
 return 0;
 }
