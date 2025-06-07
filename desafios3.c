@@ -37,6 +37,19 @@ void somma(int* num2, int* m2, int* n2) {
 }
 
 
+
+// Escreva a mesma função de potencia que você fez na aula anterior, só que dessa vez, o resultado deve ser salvo em um inteiro que vem na
+// lista de parâmetros da função. Para isso, claro, você precisará receber um ponteiro de inteiro:
+void potenciaaa(int* resultado2, int e, int f) {
+    (*resultado2) = 1;
+
+    for(int k = 0; k < f; k++) {
+        (*resultado2) *= e;
+    }
+    printf("%d elevado a %d = %d", e, f, (*resultado2));
+}
+
+
 int main() {
 
 // Escreva um programa que peça para o usuário digitar duas variáveis inteiras (x e y) e
@@ -124,6 +137,13 @@ int main() {
     
     somma(&num, &m, &n);
     printf("%d + %d = %d", m, n, num);
+
+
+
+// Escreva a mesma função de potencia que você fez na aula anterior, só que dessa vez, o resultado deve ser salvo em um inteiro que vem na
+// lista de parâmetros da função. Para isso, claro, você precisará receber um ponteiro de inteiro:
+    int resultado;
+    potenciaaa(&resultado, 2, 3);
 
 return 0;
 }
