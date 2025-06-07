@@ -14,7 +14,7 @@
         for(int j = 0; j < d; j++) {
             pot *= c;
         }
-        printf("\n%d elevado a %d = %d", c, d, pot);
+        printf("\n%d elevado a %d = %d\n\n", c, d, pot);
     }
 
 
@@ -26,7 +26,7 @@
         for(int m = 0; m < 10; m++) {
             resultado += numeros[m];
         }
-        printf("\nresultado da soma: %d", resultado);
+        printf("\nresultado da soma de 0 até 9: %d\n\n", resultado);
     }
 
 
@@ -46,7 +46,7 @@ void potenciaaa(int* resultado2, int e, int f) {
     for(int k = 0; k < f; k++) {
         (*resultado2) *= e;
     }
-    printf("%d elevado a %d = %d", e, f, (*resultado2));
+    printf("%d elevado a %d = %d\n\n", e, f, (*resultado2));
 }
 
 
@@ -133,10 +133,10 @@ int main() {
     printf("\ndigite o n: ");
     scanf("%d", &n);
 
-    int num = m + n;
+    int num;
     
     somma(&num, &m, &n);
-    printf("%d + %d = %d", m, n, num);
+    printf("%d + %d = %d\n\n", m, n, num);
 
 
 
