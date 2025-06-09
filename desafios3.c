@@ -26,7 +26,7 @@
         for(int m = 0; m < 10; m++) {
             resultado += numeros[m];
         }
-        printf("\nresultado da soma de 0 até 9: %d\n\n", resultado);
+        printf("\nresultado da soma de 0 ate 9: %d\n\n", resultado);
     }
 
 
@@ -47,6 +47,17 @@ void potenciaaa(int* resultado2, int e, int f) {
         (*resultado2) *= e;
     }
     printf("%d elevado a %d = %d\n\n", e, f, (*resultado2));
+}
+
+
+
+// Escreva uma função soma que recebe um array de inteiros e o tamanho do array, e retorna a soma dos números desse array.
+int somar(int* nums, int tamanho) {
+    int respostas = 0;
+    for(int l = 0; l < tamanho; l++) {
+        respostas += nums[l];
+    }
+    return respostas;
 }
 
 
@@ -144,6 +155,19 @@ int main() {
 // lista de parâmetros da função. Para isso, claro, você precisará receber um ponteiro de inteiro:
     int resultado;
     potenciaaa(&resultado, 2, 3);
+
+
+
+    
+// Escreva uma função soma que recebe um array de inteiros e o tamanho do array, e retorna a soma dos números desse array.
+// Repare no código abaixo que arrays são por natureza ponteiros, então podemos passá-los diretamente, sem o uso de &.
+    int nums[3];
+    nums[0] = 10;
+    nums[1] = 20;
+    nums[2] = 30;
+
+    int total = somar(nums, 3);
+    printf("\no total: %d\n\n", total);
 
 return 0;
 }
