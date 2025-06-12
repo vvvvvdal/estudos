@@ -68,10 +68,10 @@ void abrirTeste() {
     FILE* f = fopen("teste.txt", "r");
 
     if(f == 0) {
-        printf("desculpe :( ocorreu um erro na abertura do arquivo texte.txt\n\n");
+        printf("desculpe :( ocorreu um erro na abertura do arquivo teste.txt\n\n");
         exit(1);
     } else {
-        printf("ocorreu tudo certo na abertura do arquivo texte.txt :)\n\n");
+        printf("ocorreu tudo certo na abertura do arquivo teste.txt :)\n\n");
     }
 
     fclose(f);
