@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 // Escreva uma função potencia() que receba dois inteiros, c e d, calcule a potência c^d, ou seja, c elevado a d e imprima o resultado.
     void potencia(int c, int d) {
@@ -60,6 +61,21 @@ int somar(int* nums, int tamanho) {
     return respostas;
 }
 
+
+
+// Escreva um código que abre o arquivo "teste.txt" em modo somente leitura. Trate também a possibilidade de erro na abertura.
+void abrirTeste() {
+    FILE* f = fopen("teste.txt", "r");
+
+    if(f == 0) {
+        printf("desculpe :( ocorreu um erro na abertura do arquivo texte.txt\n\n");
+        exit(1);
+    } else {
+        printf("ocorreu tudo certo na abertura do arquivo texte.txt :)\n\n");
+    }
+
+    fclose(f);
+}
 
 int main() {
 
@@ -168,6 +184,11 @@ int main() {
 
     int total = somar(nums, 3);
     printf("\no total: %d\n\n", total);
+
+
+    
+// Escreva um código que abre o arquivo "teste.txt" em modo somente leitura. Trate também a possibilidade de erro na abertura.
+    abrirTeste();
 
 return 0;
 }
