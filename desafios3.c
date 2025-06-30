@@ -3,32 +3,32 @@
 #include <stdlib.h>
 
 // Escreva uma função potencia() que receba dois inteiros, c e d, calcule a potência c^d, ou seja, c elevado a d e imprima o resultado.
-    void potencia(int c, int d) {
-        int pot = 1;
+void potencia(int c, int d) {
+    int pot = 1;
 
-        printf("digite o c: ");
-        scanf("%d", &c);
+    printf("digite o c: ");
+    scanf("%d", &c);
 
-        printf("\ndigite o d: ");
-        scanf("%d", &d);
+    printf("\ndigite o d: ");
+    scanf("%d", &d);
 
-        for(int j = 0; j < d; j++) {
-            pot *= c;
-        }
-        printf("\n%d elevado a %d = %d\n\n", c, d, pot);
+    for(int j = 0; j < d; j++) {
+        pot *= c;
     }
+    printf("\n%d elevado a %d = %d\n\n", c, d, pot);
+}
 
 
 
 // Escreva uma função soma(int numeros[10]) que receba um array de inteiros e imprime a soma de todos os elementos dentro desse array.
-    void soma(int numeros[10]) {
-        int resultado = 0;
+void soma(int numeros[10]) {
+    int resultado = 0;
 
-        for(int m = 0; m < 10; m++) {
-            resultado += numeros[m];
-        }
-        printf("\nresultado da soma de 0 ate 9: %d\n\n", resultado);
+    for(int m = 0; m < 10; m++) {
+        resultado += numeros[m];
     }
+    printf("\nresultado da soma de 0 ate 9: %d\n\n", resultado);
+}
 
 
 
@@ -76,6 +76,41 @@ void abrirTeste() {
 
     fclose(f);
 }
+
+
+// As dimensões de uma matriz estão declaradas nas variáveis abaixo:
+// int linhas = 5;
+// int colunas = 10;
+// Aloque essa matriz de maneira dinâmica.
+void alocarMatriz() {
+    printf("alocando matriz...\n");
+    // As dimensões de uma matriz estão declaradas nas variáveis abaixo:
+    int linhas = 5;
+    int colunas = 10;
+    // Aloque essa matriz de maneira dinâmica.
+    int** matriz;
+
+    matriz = malloc(sizeof(int*) * linhas);
+
+    if(matriz == 0) {
+        printf("erro na alocação da matriz, saindo...\n\n");
+        exit(1);
+    }
+
+    for(int i = 0; i < linhas; i++) {
+        matriz[i] = malloc(sizeof(int) * (colunas +1));
+    }
+
+    for(int i = 0; i < linhas; i++) {
+        free(matriz[i]);
+    }
+    free(matriz);
+
+    printf("matriz de %d linhas e %d colunas alocada com sucesso!!\n\n", linhas, colunas);
+
+}
+
+
 
 int main() {
 
@@ -189,6 +224,13 @@ int main() {
     
 // Escreva um código que abre o arquivo "teste.txt" em modo somente leitura. Trate também a possibilidade de erro na abertura.
     abrirTeste();
+
+
+// As dimensões de uma matriz estão declaradas nas variáveis abaixo:
+// int linhas = 5;
+// int colunas = 10;
+// Aloque essa matriz de maneira dinâmica.
+    alocarMatriz();
 
 return 0;
 }
