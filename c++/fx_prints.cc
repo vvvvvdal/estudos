@@ -17,13 +17,6 @@ void print_errados(int tent){
     cout<<endl<<endl;
 }
 
-void mensagem_inicial(){
-    cout<<"******************************"<<endl;
-    cout<<"* bem vindo ao jogo da forca *"<<endl;
-    cout<<"******************************"<<endl;
-    print_forca();
-}
-
 void mensagem_final(){
     string palavra_erros = errados.size() == 1 ? "erro":"erros";
 
