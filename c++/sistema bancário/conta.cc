@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include "conta.hh"
+#include "titular.hh"
 
 using namespace std;
 
@@ -7,7 +8,9 @@ int Conta::num_contas = 0;
 
 int Conta::get_num_contas() {return num_contas;}
 
-Conta::Conta(string id, string cpf, string nome): id(id), cpf(cpf), nome(nome), saldo(0){num_contas++;} // método construtor
+Conta::Conta(string id, Titular titular): id(id), titular(titular), saldo(0) { // método construtor
+    num_contas++;
+}
 
 Conta::~Conta(){num_contas--;} // método destrutor
 
@@ -37,9 +40,5 @@ void Conta::depositar(float valor) {
 }
 
 void Conta::get_id() const{cout<<id<<endl;} // método const: é um método que não altera nada na classe.
-
-void Conta::get_cpf() const{cout<<cpf<<endl;}
-
-void Conta::get_nome() const{cout<<nome<<endl;}
 
 float Conta::get_saldo() const {return saldo;}
