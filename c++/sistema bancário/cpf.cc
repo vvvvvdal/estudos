@@ -1,6 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
 #include "cpf.hh"
-
 
 CPF::CPF(std::string s_cpf): s_cpf(s_cpf) {
     if(!check_cpf()){
