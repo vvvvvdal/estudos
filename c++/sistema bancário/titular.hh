@@ -1,15 +1,16 @@
 #pragma once
 
 #include <bits/stdc++.h>
+#include "cpf.hh"
 
 class Titular {
 private:
-    std::string cpf, nome;
+    CPF cpf;
+    std::string nome;
     float saldo;
 
 public:
-    Titular(std::string cpf, std::string nome);
-    void get_cpf();
+    Titular(CPF cpf, std::string nome);
     void get_nome();
     
 private:
