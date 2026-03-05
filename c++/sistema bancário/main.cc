@@ -5,12 +5,12 @@ using namespace std;
 
 
 int main() {
-    Conta a("123", Titular("12321312", "Felipe Vidal"));
+    Conta a("123", Titular(CPF("12345678941"), "Felipe Vidal"));
     
     a.depositar(500);
     a.sacar(200);
 
-    Conta b("312", Titular("418213911", "Raf Bro"));
+    Conta b("312", Titular(CPF("12345678948"), "Raf Bro"));
 
     cout<<Conta::get_num_contas()<<endl;
 
