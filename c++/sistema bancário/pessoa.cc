@@ -2,7 +2,9 @@
 #include "pessoa.hh"
 using namespace std;
 
-Pessoa::Pessoa(CPF cpf, string nome): cpf(cpf), nome(nome){}
+Pessoa::Pessoa(CPF cpf, string nome): cpf(cpf), nome(nome){
+    std::cout<<"construtor de pessoa"<<std::endl;
+}
 
 void Pessoa::check_nome() {
     if(nome.size() < 5) {

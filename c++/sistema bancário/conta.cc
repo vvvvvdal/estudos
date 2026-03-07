@@ -17,15 +17,21 @@ void Conta::sacar(float valor) {
     if(saldo<0){
         std::cout<<"conta vazia\n\n";
         return;
-    } else if(saldo<valor){
+    }
+
+    float saque = valor + (valor * taxa_saque()); // saque = valor + tarifa; tarifa = valor*porcentagem
+    
+    if(saldo<saque){
         std::cout<<"valor maior que o saldo\n\n";
         return;
-    } else if(valor<0){
+    }
+    
+    if(saque<0){
         std::cout<<"valor de saque invalido\n\n";
         return;
     }
 
-    saldo -= valor;
+    saldo -= saque;
 }
 
 void Conta::depositar(float valor) {
