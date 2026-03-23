@@ -13,25 +13,18 @@ Conta::Conta(std::string id, Titular titular): id(id), titular(titular), saldo(0
 Conta::~Conta(){num_contas--;} // método destrutor
 
 // Conta::função -> implementa a função como método da classe Conta
-void Conta::sacar(float valor) {
-    if(saldo<0){
-        std::cout<<"conta vazia\n\n";
-        return;
-    }
+std::variant<Conta::resultado_saque,float> Conta::sacar(float valor) {
+    if(saldo<0) return valor_negativo;
 
     float saque = valor + (valor * taxa_saque()); // saque = valor + tarifa; tarifa = valor*porcentagem
     
-    if(saldo<saque){
-        std::cout<<"valor maior que o saldo\n\n";
-        return;
-    }
+    if(saldo<saque) return saldo_insuficiente;
     
-    if(saque<0){
-        std::cout<<"valor de saque invalido\n\n";
-        return;
-    }
+    if(saque<0) return valor_negativo;
 
     saldo -= saque;
+
+    return saldo;
 }
 
 void Conta::depositar(float valor) {
@@ -43,6 +36,14 @@ void Conta::depositar(float valor) {
     saldo += valor;
 }
 
+void Conta::operator+=(float valor) { // acrescenta a um valor. função depositar.
+    depositar(valor);
+}
+
 void Conta::get_id() const{std::cout<<id<<std::endl;} // método const: é um método que não altera nada na classe.
 
 float Conta::get_saldo() const {return saldo;}
+
+bool Conta::operator<(const Conta &outra){
+    return this->saldo < outra.saldo;
+}

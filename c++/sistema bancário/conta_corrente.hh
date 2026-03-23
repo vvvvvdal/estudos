@@ -9,4 +9,5 @@ public:
     Conta_corrente(std::string id, Titular titular);
     float taxa_saque() const override;
     void transferencia(Conta &conta, float valor);
+    void operator+=(Conta_corrente &origem);
 };

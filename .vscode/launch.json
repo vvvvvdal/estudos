@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/media/felipe/62FCE288FCE255B7/Users/felip/Documents/GitHub/estudos",
+      "program": "/media/felipe/62FCE288FCE255B7/Users/felip/Documents/GitHub/estudos/build/Debug/outDebug"
+    }
+  ]
+}

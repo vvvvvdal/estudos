@@ -10,4 +10,5 @@ protected: // as classes herdeiras podem acessar os atributos privados com prote
     void check_nome();
 public:
     Pessoa(CPF cpf, std::string nome);
+    std::string get_nome() const;
 };

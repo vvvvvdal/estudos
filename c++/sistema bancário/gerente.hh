@@ -6,6 +6,6 @@
 
 class Gerente final: public Funcionario, public Autenticavel { // final: nenhuma classe pode herdar as características dessa classe
 public:
-    Gerente(CPF cpf, std::string nome, float salario, std::string senha);
+    Gerente(CPF cpf, std::string nome, float salario, Dia_semana dia_pagamento, std::string senha);
     float bonificacao() const override;
 };

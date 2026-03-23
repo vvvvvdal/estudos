@@ -12,3 +12,7 @@ void Pessoa::check_nome() {
         exit(1);
     }
 }
+
+std::string Pessoa::get_nome() const{
+    return nome;
+}
